@@ -1,0 +1,10 @@
+default:
+  image: docker:24.0.5
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - docker build -t fedistreaks:latest .

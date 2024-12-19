@@ -1,0 +1,11 @@
+
+services:
+  fedi-streaks:
+    image: fedistreaks:latest
+    env_file: .env
+    develop:
+      watch:
+        - path: main.py
+          action: rebuild
+        - path: requirements.txt
+          action: rebuild
